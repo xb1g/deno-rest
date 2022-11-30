@@ -20,6 +20,7 @@ export type User = {
   id: number
   email: string
   name: string | null
+  phoneNum: string | null
 }
 
 
@@ -845,18 +846,21 @@ export namespace Prisma {
     id: number | null
     email: string | null
     name: string | null
+    phoneNum: string | null
   }
 
   export type UserMaxAggregateOutputType = {
     id: number | null
     email: string | null
     name: string | null
+    phoneNum: string | null
   }
 
   export type UserCountAggregateOutputType = {
     id: number
     email: number
     name: number
+    phoneNum: number
     _all: number
   }
 
@@ -873,18 +877,21 @@ export namespace Prisma {
     id?: true
     email?: true
     name?: true
+    phoneNum?: true
   }
 
   export type UserMaxAggregateInputType = {
     id?: true
     email?: true
     name?: true
+    phoneNum?: true
   }
 
   export type UserCountAggregateInputType = {
     id?: true
     email?: true
     name?: true
+    phoneNum?: true
     _all?: true
   }
 
@@ -984,6 +991,7 @@ export namespace Prisma {
     id: number
     email: string
     name: string | null
+    phoneNum: string | null
     _count: UserCountAggregateOutputType | null
     _avg: UserAvgAggregateOutputType | null
     _sum: UserSumAggregateOutputType | null
@@ -1009,6 +1017,7 @@ export namespace Prisma {
     id?: boolean
     email?: boolean
     name?: boolean
+    phoneNum?: boolean
   }
 
 
@@ -1746,7 +1755,8 @@ export namespace Prisma {
   export const UserScalarFieldEnum: {
     id: 'id',
     email: 'email',
-    name: 'name'
+    name: 'name',
+    phoneNum: 'phoneNum'
   };
 
   export type UserScalarFieldEnum = (typeof UserScalarFieldEnum)[keyof typeof UserScalarFieldEnum]
@@ -1764,12 +1774,14 @@ export namespace Prisma {
     id?: IntFilter | number
     email?: StringFilter | string
     name?: StringNullableFilter | string | null
+    phoneNum?: StringNullableFilter | string | null
   }
 
   export type UserOrderByWithRelationInput = {
     id?: SortOrder
     email?: SortOrder
     name?: SortOrder
+    phoneNum?: SortOrder
   }
 
   export type UserWhereUniqueInput = {
@@ -1781,6 +1793,7 @@ export namespace Prisma {
     id?: SortOrder
     email?: SortOrder
     name?: SortOrder
+    phoneNum?: SortOrder
     _count?: UserCountOrderByAggregateInput
     _avg?: UserAvgOrderByAggregateInput
     _max?: UserMaxOrderByAggregateInput
@@ -1795,45 +1808,53 @@ export namespace Prisma {
     id?: IntWithAggregatesFilter | number
     email?: StringWithAggregatesFilter | string
     name?: StringNullableWithAggregatesFilter | string | null
+    phoneNum?: StringNullableWithAggregatesFilter | string | null
   }
 
   export type UserCreateInput = {
     email: string
     name?: string | null
+    phoneNum?: string | null
   }
 
   export type UserUncheckedCreateInput = {
     id?: number
     email: string
     name?: string | null
+    phoneNum?: string | null
   }
 
   export type UserUpdateInput = {
     email?: StringFieldUpdateOperationsInput | string
     name?: NullableStringFieldUpdateOperationsInput | string | null
+    phoneNum?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
   export type UserUncheckedUpdateInput = {
     id?: IntFieldUpdateOperationsInput | number
     email?: StringFieldUpdateOperationsInput | string
     name?: NullableStringFieldUpdateOperationsInput | string | null
+    phoneNum?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
   export type UserCreateManyInput = {
     id?: number
     email: string
     name?: string | null
+    phoneNum?: string | null
   }
 
   export type UserUpdateManyMutationInput = {
     email?: StringFieldUpdateOperationsInput | string
     name?: NullableStringFieldUpdateOperationsInput | string | null
+    phoneNum?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
   export type UserUncheckedUpdateManyInput = {
     id?: IntFieldUpdateOperationsInput | number
     email?: StringFieldUpdateOperationsInput | string
     name?: NullableStringFieldUpdateOperationsInput | string | null
+    phoneNum?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
   export type IntFilter = {
@@ -1881,6 +1902,7 @@ export namespace Prisma {
     id?: SortOrder
     email?: SortOrder
     name?: SortOrder
+    phoneNum?: SortOrder
   }
 
   export type UserAvgOrderByAggregateInput = {
@@ -1891,12 +1913,14 @@ export namespace Prisma {
     id?: SortOrder
     email?: SortOrder
     name?: SortOrder
+    phoneNum?: SortOrder
   }
 
   export type UserMinOrderByAggregateInput = {
     id?: SortOrder
     email?: SortOrder
     name?: SortOrder
+    phoneNum?: SortOrder
   }
 
   export type UserSumOrderByAggregateInput = {
