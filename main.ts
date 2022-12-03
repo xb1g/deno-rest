@@ -12,6 +12,8 @@ const prisma = new PrismaClient({
   },
 });
 
+console.log(envVars)
+
 const app = new Application();
 const router = new Router();
 
