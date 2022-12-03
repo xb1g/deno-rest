@@ -1,6 +1,6 @@
 import { PrismaClient } from "./generated/client/deno/edge.ts";
 import { Application, Router } from "https://deno.land/x/oak/mod.ts";
-import { config } from "https://deno.land/x/dotenv/mod.ts";
+import { config } from "https://deno.land/std@0.167.0/dotenv/mod.ts";
 
 const envVars = await config();
 
