@@ -17,7 +17,7 @@ const router = new Router();
 
 router
   .get("/", (ctx) => {
-    ctx.response.body = "Hello World";
+    ctx.response.body = "Hello World From Deno Edge";
   })
   .get("/users", async (ctx) => {
     const users = await prisma.user.findMany();
