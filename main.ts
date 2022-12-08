@@ -7,12 +7,10 @@ const envVars = await config();
 const prisma = new PrismaClient({
   datasources: {
     db: {
-      url: envVars.DATABASE_URL,
+      url: envVars.DATABASE_URL || Deno.env.get("DATABASE_URL"),
     },
   },
 });
-
-console.log(envVars);
 
 const app = new Application();
 const router = new Router();
