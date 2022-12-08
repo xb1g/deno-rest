@@ -34,9 +34,9 @@ router
     ctx.response.body = user;
   })
   .post("/user", async (ctx) => {
-    const { name, email } = await ctx.request.body();
+    const body = await ctx.request.body("json").value;
     const user = await prisma.user.create({
-      data: { name, email },
+      data: body,
     });
     ctx.response.body = user;
   })
