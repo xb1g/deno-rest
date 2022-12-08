@@ -12,7 +12,7 @@ const prisma = new PrismaClient({
   },
 });
 
-console.log(envVars)
+console.log(envVars);
 
 const app = new Application();
 const router = new Router();
@@ -54,5 +54,7 @@ app.use(router.allowedMethods());
 
 //console.log("Server running on port 8000");
 //await app.listen({ port: 8000 });
-
-addEventListener("fetch", app.fetchEventHandler());
+app.addEventListener("listen", (e) =>
+  console.log("Listening on http://localhost:8080")
+);
+await app.listen({ port: 8080 });
